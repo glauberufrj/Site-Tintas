@@ -17,18 +17,3 @@
 
 </body>
 </html>
-
-<!-- {{ $name }}<br>
-{{ $idade }}<br>
-{{ $time }}<br>
-{{ $pai }}
-</h1>
-<h2>
-Hello World
-<ul>
-  @foreach($tarefas as $tarefa)
-    <li>{{$tarefa}}</li>
-  @endforeach
-</ul>
-{{ $parametro1 }}<br>
-{{ $parametro2 }} -->

@@ -10,7 +10,14 @@
     </head>
     <body>
       <h1>
-      Contato
-    </h1>
+        <table>
+          @foreach($tabela as $obj)
+            <tr>
+              <td>{{$obj->PrimeiroNome}}</td>
+              <td>{{$obj->Sobrenome}}</td>
+            </tr>
+          @endforeach
+      </table>
+      </h1>
     </body>
 </html>

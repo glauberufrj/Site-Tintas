@@ -22,10 +22,11 @@
 
 Route::get('/welcome', 'ControladorController@fazerAlgo');
 
-Route::post('/welcome', 'ControladorController@fazerMickey')->name('RotaNova');
+Route::post('/welcome', 'UsuarioController@store')->name('RotaNova');
 
+Route::get('apagar/{id}', 'UsuarioController@destroy');
 
-
+Route::get('/tabela', 'UsuarioController@index');
 
 
 
@@ -49,3 +50,7 @@ Route::get('servicos/{nome}', function ($nome) {
     return "O serviço do ".$nome." é muito bom.<br><br>
 Gostou?<a href='".url('contato')."'> Esse é o contato dele.</a>";
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
