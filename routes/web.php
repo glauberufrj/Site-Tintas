@@ -22,30 +22,16 @@
 
 Route::get('/inicio', 'ControladorController@exibirInicio');
 
-Route::get('/contato', 'ControladorController@exibirContato');
-
 Route::get('/produtos', 'ControladorController@exibirProdutos');
 
 Route::get('/welcome', 'UsuarioController@store')->name('RotaNova');
 
-Route::get('apagar/{id}', 'UsuarioController@destroy');
+Route::get('/contact', 'ContactController@show');
 
-Route::get('/tabela', 'UsuarioController@index');
-
-
+Route::post('/contact',  'ContactController@mailToAdmin');
 
 
 
-
-Route::get('servicos', function () {
-    return "O serviço do Fulano é muito bom.<br><br>
-Gostou?<a href='".url('contato')."'> Esse é o contato dele.</a>";
-});
-
-Route::get('servicos/{nome}', function ($nome) {
-    return "O serviço do ".$nome." é muito bom.<br><br>
-Gostou?<a href='".url('contato')."'> Esse é o contato dele.</a>";
-});
 
 Auth::routes();
 

@@ -11,21 +11,20 @@ class ControladorController extends Controller
       return view('inicio');
     }
 
-    public function exibirContato(){
-
-      return view('contato');
-    }
-
     public function exibirProdutos(){
 
       return view('produtos');
     }
+}
 
-    public function fazerMickey(Request $request){
+
+
+
+    /* public function fazerMickey(Request $request){
 
       //dd($request);
       $nome=$request->firstname;
       $sobrenome=$request->input('lastname');
       dd($nome,$sobrenome);
     }
-}
+    */
