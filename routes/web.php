@@ -20,9 +20,13 @@
 */
 
 
-Route::get('/welcome', 'ControladorController@fazerAlgo');
+Route::get('/inicio', 'ControladorController@exibirInicio');
 
-Route::post('/welcome', 'UsuarioController@store')->name('RotaNova');
+Route::get('/contato', 'ControladorController@exibirContato');
+
+Route::get('/produtos', 'ControladorController@exibirProdutos');
+
+Route::get('/welcome', 'UsuarioController@store')->name('RotaNova');
 
 Route::get('apagar/{id}', 'UsuarioController@destroy');
 
@@ -32,14 +36,6 @@ Route::get('/tabela', 'UsuarioController@index');
 
 
 
-
-Route::get('/contato', function () {
-    return view('contato');
-});
-
-Route::get('/fotos', function () {
-    return view('ejcm.fotos');
-});
 
 Route::get('servicos', function () {
     return "O serviço do Fulano é muito bom.<br><br>

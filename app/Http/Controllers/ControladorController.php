@@ -6,9 +6,19 @@ use Illuminate\Http\Request;
 
 class ControladorController extends Controller
 {
-    public function fazerAlgo(){
+    public function exibirInicio(){
 
-      return view('welcome');
+      return view('inicio');
+    }
+
+    public function exibirContato(){
+
+      return view('contato');
+    }
+
+    public function exibirProdutos(){
+
+      return view('produtos');
     }
 
     public function fazerMickey(Request $request){
